@@ -12,26 +12,72 @@ const Header = () => {
           <div className="fw7 mr1">Hacker News</div>
         </Link>           
         <Link to="/" className="ml1 no-underline black">
-          new
+          New
         </Link>
         <div className="ml1">|</div>
         <Link
           to="/search"
           className="ml1 no-underline black"
         >
-          search
+          Search
         </Link>
+
         {authToken && (
+
           <div className="flex">
             <div className="ml1">|</div>
             <Link
               to="/create"
               className="ml1 no-underline black"
             >
-              submit
+              Submit
             </Link>
           </div>
+
+       
         )}
+        {authToken && (
+   
+          <div className="flex">
+            <div className="ml1">|</div>
+            <Link
+              to="/linear"
+              className="ml1 no-underline black"
+            >
+              Linear
+            </Link>
+          </div>
+
+   
+        )}
+        {authToken && (
+  
+          <div className="flex">
+            <div className="ml1">|</div>
+            <Link
+              to="/resnet"
+              className="ml1 no-underline black"
+            >
+              Resnet
+            </Link>
+          </div>
+ 
+        )}
+        {authToken && (
+   
+          <div className="flex">
+            <div className="ml1">|</div>
+            <Link
+              to="/arduino"
+              className="ml1 no-underline black"
+            >
+              Arduino
+            </Link>
+          </div>
+
+
+ )}
+        
       </div>
       <div className="flex flex-fixed">
         {authToken ? (
@@ -42,14 +88,14 @@ const Header = () => {
               navigate(`/`);
             }}
           >
-            logout
+            Logout
           </div>
         ) : (
           <Link
             to="/login"
             className="ml1 no-underline black"
           >
-            login
+            Login
           </Link>
         )}
       </div>

@@ -9,6 +9,9 @@ const LINKS_QUERY = gql`
         id
         url
         description
+        postedBy{
+          username
+        }
       }
     }
   
